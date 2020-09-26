@@ -1,5 +1,6 @@
 # Setting up Pixhawk to do VIO:
 Video series Link: https://www.youtube.com/watch?v=ghB6vaI6W6Q&list=PLjn-qkXYnZkPgkriGrdTDbTAZU7KtFKKa
+
 mavlink stream -d ${MAVLINK\_COMPANION\_DEVICE} -s HIGHRES_IMU -r 200 in /etc/init.d/rcS (plug sd card to computer)
 edit px4/Firmware/src/modules/mavlink\_main\.cpp (ATTITUDE_QUATERNION parameter = 200)
 then edit camera\_trigger\_params.c in px4/Firmware/src/drivers/camera_trigger
